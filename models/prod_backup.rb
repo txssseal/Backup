@@ -8,7 +8,7 @@ Backup::Model.new(:prod_backup, 'Production daily database backups') do
 
     Logger.configure do
       logfile.enabled   = true
-      logfile.log_path  = "~/test/log/#{key}"
+      logfile.log_path  = "log/#{key}"
       logfile.max_bytes = 500_000
     end
 
