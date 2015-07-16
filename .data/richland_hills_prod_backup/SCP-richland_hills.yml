@@ -1,8 +1,0 @@
----
-- !ruby/object:Backup::Package
-  trigger: richland_hills_prod_backup
-  extension: tar
-  chunk_suffixes: []
-  no_cycle: false
-  version: 4.1.10
-  time: 2015.07.16.21.09.34
