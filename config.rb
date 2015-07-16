@@ -1,6 +1,60 @@
+require 'yaml'
+SERVERS = YAML.load(File.read(File.expand_path('../lib/servers.yml', __FILE__)))
+SECRETS = YAML.load(File.read(File.expand_path('../lib/secrets.yml', __FILE__)))
+preconfigure 'MyModel' do
+  split_into_chunks_of 250
 
+  Logger.configure do
+    logfile.enabled   = true
+    logfile.log_path  = "log/#{Time.now}_backup_log"
+    logfile.max_bytes = 500_000
+  end
 
+  compress_with Gzip do |compression|
+      compression.level = 9
+  end
 
+  emails = ['coltonsealtt@gmail.com','moeed@streetcredsoftware.com','james.jelinek@streetcredsoftware.com','suraj.munta@streetcredsoftware.com']
+
+  notify_by Mail do |mail|
+    mail.on_success           = true
+    mail.on_warning           = true
+    mail.on_failure           = true
+
+    mail.from                 = 'colton.seal@streetcredsoftware.com'
+    mail.to                   = emails
+    mail.address              = 'smtp.gmail.com'
+    mail.port                 = 587
+    mail.domain               = 'mail.google.com'
+    mail.user_name            = 'colton.seal@streetcredsoftware.com'
+    mail.password             = SECRETS['gmail_password']
+    mail.authentication       = 'plain'
+    mail.encryption           = :starttls
+  end
+
+end
+
+Backup::Database::PostgreSQL.defaults do |db|
+  db.name               = "streetcred_production"
+  db.username           = "deploy"
+  db.password           = "34qn23mn1"
+  db.port               = 5432
+  db.skip_tables        = ['change_log']
+end
+
+Backup::Storage::SCP.defaults do |s|
+  s.username = 'colton'
+  s.password = 'cookie2546'
+  s.ip       = '25.134.149.106'
+  s.port     = 22
+  s.keep     = 5
+end
+
+Backup::Syncer::RSync.defaults do |rsync|
+  rsync.mode = :ssh
+  rsync.ssh_user = "deploy"
+  rsync.compress = true
+end
 
 
 # encoding: utf-8

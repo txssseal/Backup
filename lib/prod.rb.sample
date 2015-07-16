@@ -21,8 +21,8 @@ Backup::Model.new(:prod_backup, 'Production daily database backups') do
         db.host               = value
         db.port               = 5432
       end
-    rescue Model::Error => e
-      e.to_s
+    rescue => error
+      error.inspect
     end
 
     compress_with Gzip do |compression|
