@@ -43,9 +43,9 @@ Backup::Database::PostgreSQL.defaults do |db|
 end
 
 Backup::Storage::SCP.defaults do |s|
-  s.username = 'colton'
-  s.password = 'cookie2546'
-  s.ip       = '25.134.149.106'
+  s.username = 'deploy'
+  s.password = '34qn23mn1'
+  s.ip       = '25.162.227.70'
   s.port     = 22
   s.keep     = 5
 end
