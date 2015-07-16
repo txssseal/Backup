@@ -1,0 +1,1529 @@
+[2015/07/15 16:47:23][info] Performing Backup for 'Production daily database backups (prod_backup)'!
+[2015/07/15 16:47:23][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/15 16:47:23][warn] Cleaner::Error: Cleanup Warning
+[2015/07/15 16:47:23][warn]   The temporary packaging folder still exists!
+[2015/07/15 16:47:23][warn]   '/Users/colton/Backup/.tmp/prod_backup'
+[2015/07/15 16:47:23][warn]   It will now be removed.
+[2015/07/15 16:47:23][warn]   
+[2015/07/15 16:47:23][warn]   Please check the log for messages and/or your notifications
+[2015/07/15 16:47:23][warn]   concerning this backup: 'Production daily database backups (prod_backup)'
+[2015/07/15 16:47:23][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/15 16:47:23][info] Database::PostgreSQL (gatesville) Started...
+[2015/07/15 16:47:23][info] Using Compressor::Gzip for compression.
+[2015/07/15 16:47:23][info]   Command: '/usr/bin/gzip -9'
+[2015/07/15 16:47:23][info]   Ext: '.gz'
+[2015/07/15 16:48:39][error] Model::Error: Backup for Production daily database backups (prod_backup) Failed!
+[2015/07/15 16:48:39][error] --- Wrapped Exception ---
+[2015/07/15 16:48:39][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/15 16:48:39][error]   Pipeline STDERR Messages:
+[2015/07/15 16:48:39][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/15 16:48:39][error]   
+[2015/07/15 16:48:39][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: could not connect to server: Operation timed out
+[2015/07/15 16:48:39][error]   	Is the server running on host "25.145.75.41" and accepting
+[2015/07/15 16:48:39][error]   	TCP/IP connections on port 5432?
+[2015/07/15 16:48:39][error]   The following system errors were returned:
+[2015/07/15 16:48:39][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/15 16:48:39][error] 
+[2015/07/15 16:48:39][error] Backtrace:
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/15 16:48:39][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/15 16:48:39][warn] Cleaner::Error: Cleanup Warning
+[2015/07/15 16:48:39][warn]   The temporary packaging folder still exists!
+[2015/07/15 16:48:39][warn]   '/Users/colton/Backup/.tmp/prod_backup'
+[2015/07/15 16:48:39][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/15 16:48:39][warn]   
+[2015/07/15 16:48:39][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/15 16:48:39][warn]   'Production daily database backups (prod_backup)'
+[2015/07/15 16:48:39][warn]   These files will be removed at that time!
+[2015/07/15 16:48:39][info] Sending notification using Notifier::Mail...
+[2015/07/15 16:49:13][info] Performing Backup for 'Production daily database backups (prod_backup)'!
+[2015/07/15 16:49:13][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/15 16:49:13][warn] Cleaner::Error: Cleanup Warning
+[2015/07/15 16:49:13][warn]   The temporary packaging folder still exists!
+[2015/07/15 16:49:13][warn]   '/Users/colton/Backup/.tmp/prod_backup'
+[2015/07/15 16:49:13][warn]   It will now be removed.
+[2015/07/15 16:49:13][warn]   
+[2015/07/15 16:49:13][warn]   Please check the log for messages and/or your notifications
+[2015/07/15 16:49:13][warn]   concerning this backup: 'Production daily database backups (prod_backup)'
+[2015/07/15 16:49:13][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/15 16:49:13][info] Database::PostgreSQL (gatesville) Started...
+[2015/07/15 16:49:13][info] Using Compressor::Gzip for compression.
+[2015/07/15 16:49:13][info]   Command: '/usr/bin/gzip -9'
+[2015/07/15 16:49:13][info]   Ext: '.gz'
+[2015/07/15 16:50:28][error] Model::Error: Backup for Production daily database backups (prod_backup) Failed!
+[2015/07/15 16:50:28][error] --- Wrapped Exception ---
+[2015/07/15 16:50:28][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/15 16:50:28][error]   Pipeline STDERR Messages:
+[2015/07/15 16:50:28][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/15 16:50:28][error]   
+[2015/07/15 16:50:28][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: could not connect to server: Operation timed out
+[2015/07/15 16:50:28][error]   	Is the server running on host "25.145.75.41" and accepting
+[2015/07/15 16:50:28][error]   	TCP/IP connections on port 5432?
+[2015/07/15 16:50:28][error]   The following system errors were returned:
+[2015/07/15 16:50:28][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/15 16:50:28][error] 
+[2015/07/15 16:50:28][error] Backtrace:
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/15 16:50:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/15 16:50:28][warn] Cleaner::Error: Cleanup Warning
+[2015/07/15 16:50:28][warn]   The temporary packaging folder still exists!
+[2015/07/15 16:50:28][warn]   '/Users/colton/Backup/.tmp/prod_backup'
+[2015/07/15 16:50:28][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/15 16:50:28][warn]   
+[2015/07/15 16:50:28][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/15 16:50:28][warn]   'Production daily database backups (prod_backup)'
+[2015/07/15 16:50:28][warn]   These files will be removed at that time!
+[2015/07/15 16:50:28][info] Sending notification using Notifier::Mail...
+[2015/07/16 20:51:19][info] Performing Backup for 'Westworth Production daily database backups (westworth_prod_backup)'!
+[2015/07/16 20:51:19][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 20:51:19][info] Database::PostgreSQL (gatesville) Started...
+[2015/07/16 20:51:19][info] Using Compressor::Gzip for compression.
+[2015/07/16 20:51:19][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 20:51:19][info]   Ext: '.gz'
+[2015/07/16 20:51:33][error] Model::Error: Backup for Westworth Production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 20:51:33][error] --- Wrapped Exception ---
+[2015/07/16 20:51:33][error] Pipeline::Error: Pipeline failed to execute
+[2015/07/16 20:51:33][error] --- Wrapped Exception ---
+[2015/07/16 20:51:33][error] Interrupt: 
+[2015/07/16 20:51:33][error] 
+[2015/07/16 20:51:33][error] Backtrace:
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `read'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `block in run'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:54:in `run'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:68:in `perform!'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 20:51:33][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 20:51:33][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 20:51:33][warn]   The temporary packaging folder still exists!
+[2015/07/16 20:51:33][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 20:51:33][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 20:51:33][warn]   
+[2015/07/16 20:51:33][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 20:51:33][warn]   'Westworth Production daily database backups (westworth_prod_backup)'
+[2015/07/16 20:51:33][warn]   These files will be removed at that time!
+[2015/07/16 20:51:33][info] CLI::Error: Backup will now continue...
+[2015/07/16 20:51:33][info]   The following triggers will now be processed:
+[2015/07/16 20:51:33][info]   (westworth_prod_backup)
+[2015/07/16 20:51:33][info] Sending notification using Notifier::Mail...
+[2015/07/16 20:51:34][info] Performing Backup for 'Westworth Production daily database backups (westworth_prod_backup)'!
+[2015/07/16 20:51:34][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 20:51:34][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 20:51:34][warn]   The temporary packaging folder still exists!
+[2015/07/16 20:51:34][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 20:51:34][warn]   It will now be removed.
+[2015/07/16 20:51:34][warn]   
+[2015/07/16 20:51:34][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 20:51:34][warn]   concerning this backup: 'Westworth Production daily database backups (westworth_prod_backup)'
+[2015/07/16 20:51:34][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 20:51:34][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 20:51:34][info] Using Compressor::Gzip for compression.
+[2015/07/16 20:51:34][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 20:51:34][info]   Ext: '.gz'
+[2015/07/16 20:51:34][error] Model::Error: Backup for Westworth Production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 20:51:34][error] --- Wrapped Exception ---
+[2015/07/16 20:51:34][error] Pipeline::Error: Pipeline failed to execute
+[2015/07/16 20:51:34][error] --- Wrapped Exception ---
+[2015/07/16 20:51:34][error] Interrupt: 
+[2015/07/16 20:51:34][error] 
+[2015/07/16 20:51:34][error] Backtrace:
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `read'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `block in run'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:54:in `run'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:68:in `perform!'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 20:51:34][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 20:51:34][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 20:51:34][warn]   The temporary packaging folder still exists!
+[2015/07/16 20:51:34][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 20:51:34][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 20:51:34][warn]   
+[2015/07/16 20:51:34][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 20:51:34][warn]   'Westworth Production daily database backups (westworth_prod_backup)'
+[2015/07/16 20:51:34][warn]   These files will be removed at that time!
+[2015/07/16 20:51:34][info] Sending notification using Notifier::Mail...
+[2015/07/16 20:54:36][info] Performing Backup for 'Westworth Production daily database backups (westworth_prod_backup)'!
+[2015/07/16 20:54:36][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 20:54:36][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 20:54:36][warn]   The temporary packaging folder still exists!
+[2015/07/16 20:54:36][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 20:54:36][warn]   It will now be removed.
+[2015/07/16 20:54:36][warn]   
+[2015/07/16 20:54:36][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 20:54:36][warn]   concerning this backup: 'Westworth Production daily database backups (westworth_prod_backup)'
+[2015/07/16 20:54:36][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 20:54:36][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 20:54:36][info] Using Compressor::Gzip for compression.
+[2015/07/16 20:54:36][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 20:54:36][info]   Ext: '.gz'
+[2015/07/16 20:54:40][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 20:54:40][info] Packaging the backup files...
+[2015/07/16 20:54:40][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 20:54:40][info] Packaging Complete!
+[2015/07/16 20:54:40][info] Cleaning up the temporary files...
+[2015/07/16 20:54:40][info] Storage::SCP (westworth) Started...
+[2015/07/16 20:54:40][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007fd6daabef38>/westworth_prod_backup/2015.07.16.20.54.36/westworth_prod_backup.tar'...
+[2015/07/16 20:54:40][info] Cycling Started...
+[2015/07/16 20:54:40][info] Storage::SCP (westworth) Finished!
+[2015/07/16 20:54:40][info] Cleaning up the package files...
+[2015/07/16 20:54:40][warn] Backup for 'Westworth Production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:04
+[2015/07/16 20:54:40][info] Sending notification using Notifier::Mail...
+[2015/07/16 20:54:59][info] Performing Backup for 'Gatesville Production daily database backups (gatesville_prod_backup)'!
+[2015/07/16 20:54:59][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 20:54:59][info] Database::PostgreSQL (gatesville) Started...
+[2015/07/16 20:54:59][info] Using Compressor::Gzip for compression.
+[2015/07/16 20:54:59][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 20:54:59][info]   Ext: '.gz'
+[2015/07/16 20:56:15][error] Model::Error: Backup for Gatesville Production daily database backups (gatesville_prod_backup) Failed!
+[2015/07/16 20:56:15][error] --- Wrapped Exception ---
+[2015/07/16 20:56:15][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/16 20:56:15][error]   Pipeline STDERR Messages:
+[2015/07/16 20:56:15][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/16 20:56:15][error]   
+[2015/07/16 20:56:15][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: could not connect to server: Operation timed out
+[2015/07/16 20:56:15][error]   	Is the server running on host "25.145.75.41" and accepting
+[2015/07/16 20:56:15][error]   	TCP/IP connections on port 5432?
+[2015/07/16 20:56:15][error]   The following system errors were returned:
+[2015/07/16 20:56:15][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/16 20:56:15][error] 
+[2015/07/16 20:56:15][error] Backtrace:
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 20:56:15][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 20:56:15][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 20:56:15][warn]   The temporary packaging folder still exists!
+[2015/07/16 20:56:15][warn]   '/Users/colton/Backup/.tmp/gatesville_prod_backup'
+[2015/07/16 20:56:15][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 20:56:15][warn]   
+[2015/07/16 20:56:15][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 20:56:15][warn]   'Gatesville Production daily database backups (gatesville_prod_backup)'
+[2015/07/16 20:56:15][warn]   These files will be removed at that time!
+[2015/07/16 20:56:15][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:01:27][info] Performing Backup for 'Westworth Production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:01:27][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:01:27][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:01:27][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:01:27][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:01:27][info]   Ext: '.gz'
+[2015/07/16 21:01:31][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:01:31][info] Packaging the backup files...
+[2015/07/16 21:01:31][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:01:31][info] Packaging Complete!
+[2015/07/16 21:01:31][info] Cleaning up the temporary files...
+[2015/07/16 21:01:31][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:01:31][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007fb1032838c0>/westworth_prod_backup/2015.07.16.21.01.27/westworth_prod_backup.tar'...
+[2015/07/16 21:01:32][info] Cycling Started...
+[2015/07/16 21:01:32][info] Removing backup package dated 2015.07.16.20.40.21...
+[2015/07/16 21:01:32][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:01:32][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.20.40.21
+[2015/07/16 21:01:32][warn]   Package included the following 1 file(s):
+[2015/07/16 21:01:32][warn]   westworth_prod_backup.tar
+[2015/07/16 21:01:32][warn] --- Wrapped Exception ---
+[2015/07/16 21:01:32][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:01:32][warn]   rm: backups/#<Backup::Storage::SCP:0x007fb1032838c0>/westworth_prod_backup/2015.07.16.20.40.21: No such file or directory
+[2015/07/16 21:01:32][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:01:32][info] Cleaning up the package files...
+[2015/07/16 21:01:32][warn] Backup for 'Westworth Production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:05
+[2015/07/16 21:01:32][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:02:11][info] Performing Backup for 'Westworth Production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:02:11][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:02:11][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:02:11][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:02:11][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:02:11][info]   Ext: '.gz'
+[2015/07/16 21:02:14][error] Model::Error: Backup for Westworth Production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:02:14][error] --- Wrapped Exception ---
+[2015/07/16 21:02:14][error] Pipeline::Error: Pipeline failed to execute
+[2015/07/16 21:02:14][error] --- Wrapped Exception ---
+[2015/07/16 21:02:14][error] Interrupt: 
+[2015/07/16 21:02:14][error] 
+[2015/07/16 21:02:14][error] Backtrace:
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `read'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `block in run'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:54:in `run'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:68:in `perform!'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:02:14][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:02:14][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:02:14][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:02:14][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:02:14][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:02:14][warn]   
+[2015/07/16 21:02:14][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:02:14][warn]   'Westworth Production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:02:14][warn]   These files will be removed at that time!
+[2015/07/16 21:02:14][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:03:01][info] Performing Backup for 'Westworth Production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:03:01][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:03:01][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:03:01][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:03:01][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:03:01][warn]   It will now be removed.
+[2015/07/16 21:03:01][warn]   
+[2015/07/16 21:03:01][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:03:01][warn]   concerning this backup: 'Westworth Production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:03:01][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:03:01][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:03:01][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:03:01][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:03:01][info]   Ext: '.gz'
+[2015/07/16 21:03:07][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:03:07][info] Packaging the backup files...
+[2015/07/16 21:03:07][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:03:07][info] Packaging Complete!
+[2015/07/16 21:03:07][info] Cleaning up the temporary files...
+[2015/07/16 21:03:07][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:03:07][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007fd7b1c4f190>/westworth_prod_backup/2015.07.16.21.03.01/westworth_prod_backup.tar'...
+[2015/07/16 21:03:07][info] Cycling Started...
+[2015/07/16 21:03:07][info] Removing backup package dated 2015.07.16.20.41.57...
+[2015/07/16 21:03:07][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:03:07][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.20.41.57
+[2015/07/16 21:03:07][warn]   Package included the following 1 file(s):
+[2015/07/16 21:03:07][warn]   westworth_prod_backup.tar
+[2015/07/16 21:03:07][warn] --- Wrapped Exception ---
+[2015/07/16 21:03:07][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:03:07][warn]   rm: backups/#<Backup::Storage::SCP:0x007fd7b1c4f190>/westworth_prod_backup/2015.07.16.20.41.57: No such file or directory
+[2015/07/16 21:03:07][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:03:07][info] Cleaning up the package files...
+[2015/07/16 21:03:07][warn] Backup for 'Westworth Production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:06
+[2015/07/16 21:03:07][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:03:47][info] Performing Backup for 'WESTWORTH Production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:03:47][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:03:47][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:03:47][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:03:47][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:03:47][info]   Ext: '.gz'
+[2015/07/16 21:03:51][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:03:51][info] Packaging the backup files...
+[2015/07/16 21:03:51][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:03:51][info] Packaging Complete!
+[2015/07/16 21:03:51][info] Cleaning up the temporary files...
+[2015/07/16 21:03:51][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:03:51][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007ff7b5bc6d08>/westworth_prod_backup/2015.07.16.21.03.47/westworth_prod_backup.tar'...
+[2015/07/16 21:03:51][info] Cycling Started...
+[2015/07/16 21:03:51][info] Removing backup package dated 2015.07.16.20.47.43...
+[2015/07/16 21:03:51][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:03:51][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.20.47.43
+[2015/07/16 21:03:51][warn]   Package included the following 1 file(s):
+[2015/07/16 21:03:51][warn]   westworth_prod_backup.tar
+[2015/07/16 21:03:51][warn] --- Wrapped Exception ---
+[2015/07/16 21:03:51][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:03:51][warn]   rm: backups/#<Backup::Storage::SCP:0x007ff7b5bc6d08>/westworth_prod_backup/2015.07.16.20.47.43: No such file or directory
+[2015/07/16 21:03:51][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:03:51][info] Cleaning up the package files...
+[2015/07/16 21:03:51][warn] Backup for 'WESTWORTH Production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:04
+[2015/07/16 21:03:51][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:05:24][info] Performing Backup for 'Westworth Production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:05:24][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:05:24][info] Database::PostgreSQL (Westworth) Started...
+[2015/07/16 21:05:24][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:05:24][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:05:24][info]   Ext: '.gz'
+[2015/07/16 21:05:24][error] Model::Error: Backup for Westworth Production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:05:24][error] --- Wrapped Exception ---
+[2015/07/16 21:05:24][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/16 21:05:24][error]   Pipeline STDERR Messages:
+[2015/07/16 21:05:24][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/16 21:05:24][error]   
+[2015/07/16 21:05:24][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: FATAL:  role "deploy" does not exist
+[2015/07/16 21:05:24][error]   The following system errors were returned:
+[2015/07/16 21:05:24][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/16 21:05:24][error] 
+[2015/07/16 21:05:24][error] Backtrace:
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:05:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:05:24][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:05:24][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:05:24][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:05:24][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:05:24][warn]   
+[2015/07/16 21:05:24][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:05:24][warn]   'Westworth Production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:05:24][warn]   These files will be removed at that time!
+[2015/07/16 21:05:24][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:06:14][info] Performing Backup for 'Westworth Production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:06:14][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:06:14][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:06:14][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:06:14][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:06:14][warn]   It will now be removed.
+[2015/07/16 21:06:14][warn]   
+[2015/07/16 21:06:14][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:06:14][warn]   concerning this backup: 'Westworth Production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:06:14][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:06:14][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:06:14][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:06:14][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:06:14][info]   Ext: '.gz'
+[2015/07/16 21:06:18][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:06:18][info] Packaging the backup files...
+[2015/07/16 21:06:18][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:06:18][info] Packaging Complete!
+[2015/07/16 21:06:18][info] Cleaning up the temporary files...
+[2015/07/16 21:06:18][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:06:18][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007fb939337490>/westworth_prod_backup/2015.07.16.21.06.14/westworth_prod_backup.tar'...
+[2015/07/16 21:06:18][info] Cycling Started...
+[2015/07/16 21:06:18][info] Removing backup package dated 2015.07.16.20.47.48...
+[2015/07/16 21:06:18][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:06:18][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.20.47.48
+[2015/07/16 21:06:18][warn]   Package included the following 1 file(s):
+[2015/07/16 21:06:18][warn]   westworth_prod_backup.tar
+[2015/07/16 21:06:18][warn] --- Wrapped Exception ---
+[2015/07/16 21:06:18][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:06:18][warn]   rm: backups/#<Backup::Storage::SCP:0x007fb939337490>/westworth_prod_backup/2015.07.16.20.47.48: No such file or directory
+[2015/07/16 21:06:18][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:06:18][info] Cleaning up the package files...
+[2015/07/16 21:06:18][warn] Backup for 'Westworth Production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:04
+[2015/07/16 21:06:18][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:09:34][info] Performing Backup for 'Richland_hills production daily database backups (richland_hills_prod_backup)'!
+[2015/07/16 21:09:34][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:09:34][info] Database::PostgreSQL (richland_hills) Started...
+[2015/07/16 21:09:34][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:09:34][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:09:34][info]   Ext: '.gz'
+[2015/07/16 21:09:37][info] Database::PostgreSQL (richland_hills) Finished!
+[2015/07/16 21:09:37][info] Packaging the backup files...
+[2015/07/16 21:09:37][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:09:37][info] Packaging Complete!
+[2015/07/16 21:09:37][info] Cleaning up the temporary files...
+[2015/07/16 21:09:37][info] Storage::SCP (richland_hills) Started...
+[2015/07/16 21:09:38][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007fc9944ecd10>/richland_hills_prod_backup/2015.07.16.21.09.34/richland_hills_prod_backup.tar'...
+[2015/07/16 21:09:38][info] Cycling Started...
+[2015/07/16 21:09:38][info] Storage::SCP (richland_hills) Finished!
+[2015/07/16 21:09:38][info] Cleaning up the package files...
+[2015/07/16 21:09:38][info] Backup for 'Richland_hills production daily database backups (richland_hills_prod_backup)' Completed Successfully in 00:00:04
+[2015/07/16 21:09:38][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:11:29][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:11:29][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:11:29][info] Database::PostgreSQL (gatesville) Started...
+[2015/07/16 21:11:29][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:11:29][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:11:29][info]   Ext: '.gz'
+[2015/07/16 21:11:38][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:11:38][error] --- Wrapped Exception ---
+[2015/07/16 21:11:38][error] Pipeline::Error: Pipeline failed to execute
+[2015/07/16 21:11:38][error] --- Wrapped Exception ---
+[2015/07/16 21:11:38][error] Interrupt: 
+[2015/07/16 21:11:38][error] 
+[2015/07/16 21:11:38][error] Backtrace:
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `read'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `block in run'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:54:in `run'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:68:in `perform!'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:11:38][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:11:38][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:11:38][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:11:38][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:11:38][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:11:38][warn]   
+[2015/07/16 21:11:38][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:11:38][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:11:38][warn]   These files will be removed at that time!
+[2015/07/16 21:11:38][info] CLI::Error: Backup will now continue...
+[2015/07/16 21:11:38][info]   The following triggers will now be processed:
+[2015/07/16 21:11:38][info]   (westworth_prod_backup)
+[2015/07/16 21:11:38][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:11:39][error] Notifier::Error: Notifier::Mail Failed!
+[2015/07/16 21:11:39][error] --- Wrapped Exception ---
+[2015/07/16 21:11:39][error] Interrupt: 
+[2015/07/16 21:11:39][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:11:39][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:11:39][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:11:39][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:11:39][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:11:39][warn]   It will now be removed.
+[2015/07/16 21:11:39][warn]   
+[2015/07/16 21:11:39][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:11:39][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:11:39][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:11:39][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:11:39][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:11:39][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:11:39][info]   Ext: '.gz'
+[2015/07/16 21:11:40][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:11:40][error] --- Wrapped Exception ---
+[2015/07/16 21:11:40][error] Pipeline::Error: Pipeline failed to execute
+[2015/07/16 21:11:40][error] --- Wrapped Exception ---
+[2015/07/16 21:11:40][error] Interrupt: 
+[2015/07/16 21:11:40][error] 
+[2015/07/16 21:11:40][error] Backtrace:
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `read'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `block in run'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:54:in `run'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:68:in `perform!'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:11:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:11:40][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:11:40][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:11:40][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:11:40][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:11:40][warn]   
+[2015/07/16 21:11:40][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:11:40][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:11:40][warn]   These files will be removed at that time!
+[2015/07/16 21:11:40][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:11:41][error] Notifier::Error: Notifier::Mail Failed!
+[2015/07/16 21:11:41][error] --- Wrapped Exception ---
+[2015/07/16 21:11:41][error] Interrupt: 
+[2015/07/16 21:12:10][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:12:10][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:12:10][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:12:10][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:12:10][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:12:10][warn]   It will now be removed.
+[2015/07/16 21:12:10][warn]   
+[2015/07/16 21:12:10][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:12:10][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:12:10][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:12:10][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:12:10][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:12:10][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:12:10][info]   Ext: '.gz'
+[2015/07/16 21:12:13][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:12:13][info] Packaging the backup files...
+[2015/07/16 21:12:13][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:12:13][info] Packaging Complete!
+[2015/07/16 21:12:13][info] Cleaning up the temporary files...
+[2015/07/16 21:12:13][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:12:14][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007fcf5d9f4988>/westworth_prod_backup/2015.07.16.21.12.10/westworth_prod_backup.tar'...
+[2015/07/16 21:12:14][info] Cycling Started...
+[2015/07/16 21:12:14][info] Removing backup package dated 2015.07.16.20.54.36...
+[2015/07/16 21:12:14][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:12:14][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.20.54.36
+[2015/07/16 21:12:14][warn]   Package included the following 1 file(s):
+[2015/07/16 21:12:14][warn]   westworth_prod_backup.tar
+[2015/07/16 21:12:14][warn] --- Wrapped Exception ---
+[2015/07/16 21:12:14][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:12:14][warn]   rm: backups/#<Backup::Storage::SCP:0x007fcf5d9f4988>/westworth_prod_backup/2015.07.16.20.54.36: No such file or directory
+[2015/07/16 21:12:14][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:12:14][info] Cleaning up the package files...
+[2015/07/16 21:12:14][warn] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:04
+[2015/07/16 21:12:14][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:12:34][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:12:34][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:12:34][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:12:34][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:12:34][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:12:34][info]   Ext: '.gz'
+[2015/07/16 21:12:38][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:12:38][info] Packaging the backup files...
+[2015/07/16 21:12:38][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:12:38][info] Packaging Complete!
+[2015/07/16 21:12:38][info] Cleaning up the temporary files...
+[2015/07/16 21:12:38][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:12:38][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007fa24430ba40>/westworth_prod_backup/2015.07.16.21.12.34/westworth_prod_backup.tar'...
+[2015/07/16 21:12:38][info] Cycling Started...
+[2015/07/16 21:12:38][info] Removing backup package dated 2015.07.16.21.01.27...
+[2015/07/16 21:12:39][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:12:39][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.21.01.27
+[2015/07/16 21:12:39][warn]   Package included the following 1 file(s):
+[2015/07/16 21:12:39][warn]   westworth_prod_backup.tar
+[2015/07/16 21:12:39][warn] --- Wrapped Exception ---
+[2015/07/16 21:12:39][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:12:39][warn]   rm: backups/#<Backup::Storage::SCP:0x007fa24430ba40>/westworth_prod_backup/2015.07.16.21.01.27: No such file or directory
+[2015/07/16 21:12:39][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:12:39][info] Cleaning up the package files...
+[2015/07/16 21:12:39][warn] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:05
+[2015/07/16 21:12:39][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:12:58][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:12:58][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:12:58][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:12:58][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:12:58][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:12:58][info]   Ext: '.gz'
+[2015/07/16 21:13:02][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:13:02][info] Packaging the backup files...
+[2015/07/16 21:13:02][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:13:02][info] Packaging Complete!
+[2015/07/16 21:13:02][info] Cleaning up the temporary files...
+[2015/07/16 21:13:02][info] Storage::SCP Started...
+[2015/07/16 21:13:02][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007fa32a2979b0>/westworth_prod_backup/2015.07.16.21.12.58/westworth_prod_backup.tar'...
+[2015/07/16 21:13:02][info] Cycling Started...
+[2015/07/16 21:13:02][info] Storage::SCP Finished!
+[2015/07/16 21:13:02][info] Cleaning up the package files...
+[2015/07/16 21:13:02][info] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully in 00:00:04
+[2015/07/16 21:13:02][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:13:28][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:13:28][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:13:28][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:13:28][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:13:28][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:13:28][info]   Ext: '.gz'
+[2015/07/16 21:13:32][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:13:32][info] Packaging the backup files...
+[2015/07/16 21:13:32][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:13:32][info] Packaging Complete!
+[2015/07/16 21:13:32][info] Cleaning up the temporary files...
+[2015/07/16 21:13:32][info] Storage::SCP Started...
+[2015/07/16 21:13:32][info] Storing '25.134.149.106:backups/#<Backup::Storage::SCP:0x007ffc2ae741d0>/westworth_prod_backup/2015.07.16.21.13.28/westworth_prod_backup.tar'...
+[2015/07/16 21:13:32][info] Cycling Started...
+[2015/07/16 21:13:32][info] Storage::SCP Finished!
+[2015/07/16 21:13:32][info] Cleaning up the package files...
+[2015/07/16 21:13:32][info] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully in 00:00:04
+[2015/07/16 21:13:32][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:13:48][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:13:48][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:13:48][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:13:48][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:13:48][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:13:48][info]   Ext: '.gz'
+[2015/07/16 21:13:52][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:13:52][info] Packaging the backup files...
+[2015/07/16 21:13:52][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:13:52][info] Packaging Complete!
+[2015/07/16 21:13:52][info] Cleaning up the temporary files...
+[2015/07/16 21:13:52][info] Storage::SCP Started...
+[2015/07/16 21:13:52][info] Storing '25.134.149.106:backups/westworth_prod_backup/2015.07.16.21.13.48/westworth_prod_backup.tar'...
+[2015/07/16 21:13:52][info] Cycling Started...
+[2015/07/16 21:13:52][info] Storage::SCP Finished!
+[2015/07/16 21:13:52][info] Cleaning up the package files...
+[2015/07/16 21:13:52][info] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully in 00:00:04
+[2015/07/16 21:13:52][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:14:11][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:14:11][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:14:11][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:14:11][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:14:11][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:14:11][info]   Ext: '.gz'
+[2015/07/16 21:14:15][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:14:15][info] Packaging the backup files...
+[2015/07/16 21:14:15][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:14:15][info] Packaging Complete!
+[2015/07/16 21:14:15][info] Cleaning up the temporary files...
+[2015/07/16 21:14:15][info] Storage::SCP Started...
+[2015/07/16 21:14:15][info] Storing '25.134.149.106:backups/westworth_prod_backup/2015.07.16.21.14.11/westworth_prod_backup.tar'...
+[2015/07/16 21:14:15][info] Cycling Started...
+[2015/07/16 21:14:15][info] Storage::SCP Finished!
+[2015/07/16 21:14:15][info] Cleaning up the package files...
+[2015/07/16 21:14:15][info] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully in 00:00:04
+[2015/07/16 21:14:15][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:14:35][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:14:35][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:14:35][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:14:35][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:14:35][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:14:35][info]   Ext: '.gz'
+[2015/07/16 21:14:39][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:14:39][info] Packaging the backup files...
+[2015/07/16 21:14:39][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:14:39][info] Packaging Complete!
+[2015/07/16 21:14:39][info] Cleaning up the temporary files...
+[2015/07/16 21:14:39][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:14:39][info] Storing '25.134.149.106:backups/westworth_prod_backup/2015.07.16.21.14.35/westworth_prod_backup.tar'...
+[2015/07/16 21:14:39][info] Cycling Started...
+[2015/07/16 21:14:39][info] Removing backup package dated 2015.07.16.21.03.01...
+[2015/07/16 21:14:39][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:14:39][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.21.03.01
+[2015/07/16 21:14:39][warn]   Package included the following 1 file(s):
+[2015/07/16 21:14:39][warn]   westworth_prod_backup.tar
+[2015/07/16 21:14:39][warn] --- Wrapped Exception ---
+[2015/07/16 21:14:39][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:14:39][warn]   rm: backups/westworth_prod_backup/2015.07.16.21.03.01: No such file or directory
+[2015/07/16 21:14:39][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:14:39][info] Cleaning up the package files...
+[2015/07/16 21:14:39][warn] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:04
+[2015/07/16 21:14:39][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:16:19][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:16:19][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:16:19][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:16:19][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:16:19][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:16:19][info]   Ext: '.gz'
+[2015/07/16 21:16:23][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:16:23][info] Packaging the backup files...
+[2015/07/16 21:16:23][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:16:23][info] Packaging Complete!
+[2015/07/16 21:16:23][info] Cleaning up the temporary files...
+[2015/07/16 21:16:23][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:16:23][info] Storing '25.134.149.106:backups/westworth/westworth_prod_backup/2015.07.16.21.16.19/westworth_prod_backup.tar'...
+[2015/07/16 21:16:23][info] Cycling Started...
+[2015/07/16 21:16:23][info] Removing backup package dated 2015.07.16.21.03.47...
+[2015/07/16 21:16:23][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:16:23][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.21.03.47
+[2015/07/16 21:16:23][warn]   Package included the following 1 file(s):
+[2015/07/16 21:16:23][warn]   westworth_prod_backup.tar
+[2015/07/16 21:16:23][warn] --- Wrapped Exception ---
+[2015/07/16 21:16:23][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:16:23][warn]   rm: backups/westworth/westworth_prod_backup/2015.07.16.21.03.47: No such file or directory
+[2015/07/16 21:16:23][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:16:23][info] Cleaning up the package files...
+[2015/07/16 21:16:23][warn] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:04
+[2015/07/16 21:16:23][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:25:44][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:25:44][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:25:44][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:25:44][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:25:44][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:25:44][info]   Ext: '.gz'
+[2015/07/16 21:25:48][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:25:48][info] Packaging the backup files...
+[2015/07/16 21:25:48][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:25:48][info] Packaging Complete!
+[2015/07/16 21:25:48][info] Cleaning up the temporary files...
+[2015/07/16 21:25:48][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:25:49][info] Storing '25.134.149.106:backups/westworth/westworth_prod_backup/2015.07.16.21.25.44/westworth_prod_backup.tar'...
+[2015/07/16 21:25:49][info] Cycling Started...
+[2015/07/16 21:25:49][info] Removing backup package dated 2015.07.16.21.06.14...
+[2015/07/16 21:25:49][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:25:49][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.21.06.14
+[2015/07/16 21:25:49][warn]   Package included the following 1 file(s):
+[2015/07/16 21:25:49][warn]   westworth_prod_backup.tar
+[2015/07/16 21:25:49][warn] --- Wrapped Exception ---
+[2015/07/16 21:25:49][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:25:49][warn]   rm: backups/westworth/westworth_prod_backup/2015.07.16.21.06.14: No such file or directory
+[2015/07/16 21:25:49][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:25:49][info] Cleaning up the package files...
+[2015/07/16 21:25:49][info] Syncer::RSync::Pull Started...
+[2015/07/16 21:25:49][info] Running system utility 'rsync'...
+[2015/07/16 21:27:42][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:27:42][error] --- Wrapped Exception ---
+[2015/07/16 21:27:42][error] Utilities::Error: Failed to execute 'rsync'
+[2015/07/16 21:27:42][error] --- Wrapped Exception ---
+[2015/07/16 21:27:42][error] Interrupt: 
+[2015/07/16 21:27:42][error] 
+[2015/07/16 21:27:42][error] Backtrace:
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:178:in `read'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:178:in `block in run'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:176:in `run'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:217:in `block (2 levels) in <module:Helpers>'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/syncer/rsync/pull.rb:13:in `perform!'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:272:in `each'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:272:in `perform!'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:27:42][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:27:42][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:37:53][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:37:53][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:37:53][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:37:53][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:37:53][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:37:53][info]   Ext: '.gz'
+[2015/07/16 21:38:24][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:38:24][error] --- Wrapped Exception ---
+[2015/07/16 21:38:24][error] Pipeline::Error: Pipeline failed to execute
+[2015/07/16 21:38:24][error] --- Wrapped Exception ---
+[2015/07/16 21:38:24][error] Interrupt: 
+[2015/07/16 21:38:24][error] 
+[2015/07/16 21:38:24][error] Backtrace:
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `read'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:55:in `block in run'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/pipeline.rb:54:in `run'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:68:in `perform!'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:38:24][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:38:24][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:38:24][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:38:24][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:38:24][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:38:24][warn]   
+[2015/07/16 21:38:24][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:38:24][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:38:24][warn]   These files will be removed at that time!
+[2015/07/16 21:38:24][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:38:25][error] Notifier::Error: Notifier::Mail Failed!
+[2015/07/16 21:38:25][error] --- Wrapped Exception ---
+[2015/07/16 21:38:25][error] Interrupt: 
+[2015/07/16 21:38:37][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:38:37][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:38:37][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:38:37][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:38:37][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:38:37][warn]   It will now be removed.
+[2015/07/16 21:38:37][warn]   
+[2015/07/16 21:38:37][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:38:37][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:38:37][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:38:37][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:38:37][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:38:37][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:38:37][info]   Ext: '.gz'
+[2015/07/16 21:38:41][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:38:41][info] Packaging the backup files...
+[2015/07/16 21:38:41][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:38:41][info] Packaging Complete!
+[2015/07/16 21:38:41][info] Cleaning up the temporary files...
+[2015/07/16 21:38:41][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:38:42][info] Storing '25.134.149.106:backups/westworth/westworth_prod_backup/2015.07.16.21.38.37/westworth_prod_backup.tar'...
+[2015/07/16 21:38:42][info] Cycling Started...
+[2015/07/16 21:38:42][info] Removing backup package dated 2015.07.16.21.12.10...
+[2015/07/16 21:38:42][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:38:42][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.21.12.10
+[2015/07/16 21:38:42][warn]   Package included the following 1 file(s):
+[2015/07/16 21:38:42][warn]   westworth_prod_backup.tar
+[2015/07/16 21:38:42][warn] --- Wrapped Exception ---
+[2015/07/16 21:38:42][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:38:42][warn]   rm: backups/westworth/westworth_prod_backup/2015.07.16.21.12.10: No such file or directory
+[2015/07/16 21:38:42][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:38:42][info] Cleaning up the package files...
+[2015/07/16 21:38:42][info] Syncer::RSync::Pull Started...
+[2015/07/16 21:38:42][info] Running system utility 'rsync'...
+[2015/07/16 21:38:44][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:38:44][error] --- Wrapped Exception ---
+[2015/07/16 21:38:44][error] Utilities::Error: Failed to execute 'rsync'
+[2015/07/16 21:38:44][error] --- Wrapped Exception ---
+[2015/07/16 21:38:44][error] Interrupt: 
+[2015/07/16 21:38:44][error] 
+[2015/07/16 21:38:44][error] Backtrace:
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:178:in `read'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:178:in `block in run'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:176:in `run'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:217:in `block (2 levels) in <module:Helpers>'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/syncer/rsync/pull.rb:13:in `perform!'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:272:in `each'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:272:in `perform!'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:38:44][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:38:44][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:39:49][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:39:49][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:39:49][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:39:49][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:39:49][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:39:49][info]   Ext: '.gz'
+[2015/07/16 21:39:53][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:39:53][info] Packaging the backup files...
+[2015/07/16 21:39:53][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:39:53][info] Packaging Complete!
+[2015/07/16 21:39:53][info] Cleaning up the temporary files...
+[2015/07/16 21:39:53][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:39:53][info] Storing '25.134.149.106:backups/westworth/westworth_prod_backup/2015.07.16.21.39.49/westworth_prod_backup.tar'...
+[2015/07/16 21:39:53][info] Cycling Started...
+[2015/07/16 21:39:53][info] Removing backup package dated 2015.07.16.21.12.34...
+[2015/07/16 21:39:53][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:39:53][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.21.12.34
+[2015/07/16 21:39:53][warn]   Package included the following 1 file(s):
+[2015/07/16 21:39:53][warn]   westworth_prod_backup.tar
+[2015/07/16 21:39:53][warn] --- Wrapped Exception ---
+[2015/07/16 21:39:53][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:39:53][warn]   rm: backups/westworth/westworth_prod_backup/2015.07.16.21.12.34: No such file or directory
+[2015/07/16 21:39:53][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:39:53][info] Cleaning up the package files...
+[2015/07/16 21:39:53][info] Syncer::RSync::Pull Started...
+[2015/07/16 21:39:53][info] Running system utility 'rsync'...
+[2015/07/16 21:39:57][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:39:57][error] --- Wrapped Exception ---
+[2015/07/16 21:39:57][error] Utilities::Error: Failed to execute 'rsync'
+[2015/07/16 21:39:57][error] --- Wrapped Exception ---
+[2015/07/16 21:39:57][error] Interrupt: 
+[2015/07/16 21:39:57][error] 
+[2015/07/16 21:39:57][error] Backtrace:
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:178:in `read'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:178:in `block in run'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:176:in `run'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:217:in `block (2 levels) in <module:Helpers>'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/syncer/rsync/pull.rb:13:in `perform!'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:272:in `each'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:272:in `perform!'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:39:57][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:39:57][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:41:45][warn] Database::Error: Database Identifier Missing
+[2015/07/16 21:41:45][warn]   When multiple Databases are configured in a single Backup Model
+[2015/07/16 21:41:45][warn]   that have the same class (MySQL, PostgreSQL, etc.), the optional
+[2015/07/16 21:41:45][warn]   +database_id+ must be specified to uniquely identify each instance.
+[2015/07/16 21:41:45][warn]   e.g. database MySQL, :database_id do |db|
+[2015/07/16 21:41:45][warn]   This will result in an output file in your final backup package like:
+[2015/07/16 21:41:45][warn]   databases/MySQL-database_id.sql
+[2015/07/16 21:41:45][warn]   
+[2015/07/16 21:41:45][warn]   Backup has auto-generated an identifier (82905) for this
+[2015/07/16 21:41:45][warn]   database dump and will now continue.
+[2015/07/16 21:41:45][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:41:45][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:41:45][info] Database::PostgreSQL (82905) Started...
+[2015/07/16 21:41:45][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:41:45][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:41:45][info]   Ext: '.gz'
+[2015/07/16 21:41:45][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:41:45][error] --- Wrapped Exception ---
+[2015/07/16 21:41:45][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/16 21:41:45][error]   Pipeline STDERR Messages:
+[2015/07/16 21:41:45][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/16 21:41:45][error]   
+[2015/07/16 21:41:45][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: FATAL:  role "deploy" does not exist
+[2015/07/16 21:41:45][error]   The following system errors were returned:
+[2015/07/16 21:41:45][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/16 21:41:45][error] 
+[2015/07/16 21:41:45][error] Backtrace:
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:41:45][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:41:45][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:41:45][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:41:45][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:41:45][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:41:45][warn]   
+[2015/07/16 21:41:45][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:41:45][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:41:45][warn]   These files will be removed at that time!
+[2015/07/16 21:41:45][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:42:02][warn] Database::Error: Database Identifier Missing
+[2015/07/16 21:42:02][warn]   When multiple Databases are configured in a single Backup Model
+[2015/07/16 21:42:02][warn]   that have the same class (MySQL, PostgreSQL, etc.), the optional
+[2015/07/16 21:42:02][warn]   +database_id+ must be specified to uniquely identify each instance.
+[2015/07/16 21:42:02][warn]   e.g. database MySQL, :database_id do |db|
+[2015/07/16 21:42:02][warn]   This will result in an output file in your final backup package like:
+[2015/07/16 21:42:02][warn]   databases/MySQL-database_id.sql
+[2015/07/16 21:42:02][warn]   
+[2015/07/16 21:42:02][warn]   Backup has auto-generated an identifier (82922) for this
+[2015/07/16 21:42:02][warn]   database dump and will now continue.
+[2015/07/16 21:42:02][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:42:02][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:42:02][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:42:02][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:42:02][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:42:02][warn]   It will now be removed.
+[2015/07/16 21:42:02][warn]   
+[2015/07/16 21:42:02][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:42:02][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:42:02][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:42:02][info] Database::PostgreSQL (82922) Started...
+[2015/07/16 21:42:02][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:42:02][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:42:02][info]   Ext: '.gz'
+[2015/07/16 21:42:02][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:42:02][error] --- Wrapped Exception ---
+[2015/07/16 21:42:02][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/16 21:42:02][error]   Pipeline STDERR Messages:
+[2015/07/16 21:42:02][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/16 21:42:02][error]   
+[2015/07/16 21:42:02][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: FATAL:  role "deploy" does not exist
+[2015/07/16 21:42:02][error]   The following system errors were returned:
+[2015/07/16 21:42:02][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/16 21:42:02][error] 
+[2015/07/16 21:42:02][error] Backtrace:
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:42:02][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:42:02][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:42:02][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:42:02][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:42:02][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:42:02][warn]   
+[2015/07/16 21:42:02][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:42:02][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:42:02][warn]   These files will be removed at that time!
+[2015/07/16 21:42:02][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:43:05][warn] Database::Error: Database Identifier Missing
+[2015/07/16 21:43:05][warn]   When multiple Databases are configured in a single Backup Model
+[2015/07/16 21:43:05][warn]   that have the same class (MySQL, PostgreSQL, etc.), the optional
+[2015/07/16 21:43:05][warn]   +database_id+ must be specified to uniquely identify each instance.
+[2015/07/16 21:43:05][warn]   e.g. database MySQL, :database_id do |db|
+[2015/07/16 21:43:05][warn]   This will result in an output file in your final backup package like:
+[2015/07/16 21:43:05][warn]   databases/MySQL-database_id.sql
+[2015/07/16 21:43:05][warn]   
+[2015/07/16 21:43:05][warn]   Backup has auto-generated an identifier (82985) for this
+[2015/07/16 21:43:05][warn]   database dump and will now continue.
+[2015/07/16 21:43:05][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:43:05][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:43:05][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:43:05][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:43:05][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:43:05][warn]   It will now be removed.
+[2015/07/16 21:43:05][warn]   
+[2015/07/16 21:43:05][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:43:05][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:43:05][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:43:05][info] Database::PostgreSQL (10) Started...
+[2015/07/16 21:43:05][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:43:05][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:43:05][info]   Ext: '.gz'
+[2015/07/16 21:43:06][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:43:06][error] --- Wrapped Exception ---
+[2015/07/16 21:43:06][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/16 21:43:06][error]   Pipeline STDERR Messages:
+[2015/07/16 21:43:06][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/16 21:43:06][error]   
+[2015/07/16 21:43:06][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: FATAL:  role "deploy" does not exist
+[2015/07/16 21:43:06][error]   The following system errors were returned:
+[2015/07/16 21:43:06][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/16 21:43:06][error] 
+[2015/07/16 21:43:06][error] Backtrace:
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:43:06][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:43:06][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:43:06][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:43:06][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:43:06][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:43:06][warn]   
+[2015/07/16 21:43:06][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:43:06][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:43:06][warn]   These files will be removed at that time!
+[2015/07/16 21:43:06][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:43:28][warn] Database::Error: Database Identifier Missing
+[2015/07/16 21:43:28][warn]   When multiple Databases are configured in a single Backup Model
+[2015/07/16 21:43:28][warn]   that have the same class (MySQL, PostgreSQL, etc.), the optional
+[2015/07/16 21:43:28][warn]   +database_id+ must be specified to uniquely identify each instance.
+[2015/07/16 21:43:28][warn]   e.g. database MySQL, :database_id do |db|
+[2015/07/16 21:43:28][warn]   This will result in an output file in your final backup package like:
+[2015/07/16 21:43:28][warn]   databases/MySQL-database_id.sql
+[2015/07/16 21:43:28][warn]   
+[2015/07/16 21:43:28][warn]   Backup has auto-generated an identifier (83008) for this
+[2015/07/16 21:43:28][warn]   database dump and will now continue.
+[2015/07/16 21:43:28][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:43:28][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:43:28][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:43:28][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:43:28][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:43:28][warn]   It will now be removed.
+[2015/07/16 21:43:28][warn]   
+[2015/07/16 21:43:28][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:43:28][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:43:28][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:43:28][info] Database::PostgreSQL (database_id) Started...
+[2015/07/16 21:43:28][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:43:28][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:43:28][info]   Ext: '.gz'
+[2015/07/16 21:43:28][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:43:28][error] --- Wrapped Exception ---
+[2015/07/16 21:43:28][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/16 21:43:28][error]   Pipeline STDERR Messages:
+[2015/07/16 21:43:28][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/16 21:43:28][error]   
+[2015/07/16 21:43:28][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: FATAL:  role "deploy" does not exist
+[2015/07/16 21:43:28][error]   The following system errors were returned:
+[2015/07/16 21:43:28][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/16 21:43:28][error] 
+[2015/07/16 21:43:28][error] Backtrace:
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:43:28][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:43:28][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:43:28][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:43:28][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:43:28][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:43:28][warn]   
+[2015/07/16 21:43:28][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:43:28][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:43:28][warn]   These files will be removed at that time!
+[2015/07/16 21:43:28][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:45:59][warn] Database::Error: Database Identifier Missing
+[2015/07/16 21:45:59][warn]   When multiple Databases are configured in a single Backup Model
+[2015/07/16 21:45:59][warn]   that have the same class (MySQL, PostgreSQL, etc.), the optional
+[2015/07/16 21:45:59][warn]   +database_id+ must be specified to uniquely identify each instance.
+[2015/07/16 21:45:59][warn]   e.g. database MySQL, :database_id do |db|
+[2015/07/16 21:45:59][warn]   This will result in an output file in your final backup package like:
+[2015/07/16 21:45:59][warn]   databases/MySQL-database_id.sql
+[2015/07/16 21:45:59][warn]   
+[2015/07/16 21:45:59][warn]   Backup has auto-generated an identifier (83159) for this
+[2015/07/16 21:45:59][warn]   database dump and will now continue.
+[2015/07/16 21:45:59][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:45:59][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:45:59][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:45:59][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:45:59][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:45:59][warn]   It will now be removed.
+[2015/07/16 21:45:59][warn]   
+[2015/07/16 21:45:59][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:45:59][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:45:59][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:45:59][info] Database::PostgreSQL (83159) Started...
+[2015/07/16 21:45:59][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:45:59][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:45:59][info]   Ext: '.gz'
+[2015/07/16 21:45:59][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:45:59][error] --- Wrapped Exception ---
+[2015/07/16 21:45:59][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/16 21:45:59][error]   Pipeline STDERR Messages:
+[2015/07/16 21:45:59][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/16 21:45:59][error]   
+[2015/07/16 21:45:59][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: FATAL:  role "deploy" does not exist
+[2015/07/16 21:45:59][error]   The following system errors were returned:
+[2015/07/16 21:45:59][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/16 21:45:59][error] 
+[2015/07/16 21:45:59][error] Backtrace:
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:45:59][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:45:59][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:45:59][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:45:59][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:45:59][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:45:59][warn]   
+[2015/07/16 21:45:59][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:45:59][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:45:59][warn]   These files will be removed at that time!
+[2015/07/16 21:45:59][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:46:40][warn] Database::Error: Database Identifier Missing
+[2015/07/16 21:46:40][warn]   When multiple Databases are configured in a single Backup Model
+[2015/07/16 21:46:40][warn]   that have the same class (MySQL, PostgreSQL, etc.), the optional
+[2015/07/16 21:46:40][warn]   +database_id+ must be specified to uniquely identify each instance.
+[2015/07/16 21:46:40][warn]   e.g. database MySQL, :database_id do |db|
+[2015/07/16 21:46:40][warn]   This will result in an output file in your final backup package like:
+[2015/07/16 21:46:40][warn]   databases/MySQL-database_id.sql
+[2015/07/16 21:46:40][warn]   
+[2015/07/16 21:46:40][warn]   Backup has auto-generated an identifier (83200) for this
+[2015/07/16 21:46:40][warn]   database dump and will now continue.
+[2015/07/16 21:46:40][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:46:40][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:46:40][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:46:40][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:46:40][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:46:40][warn]   It will now be removed.
+[2015/07/16 21:46:40][warn]   
+[2015/07/16 21:46:40][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:46:40][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:46:40][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:46:40][info] Database::PostgreSQL (83200) Started...
+[2015/07/16 21:46:40][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:46:40][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:46:40][info]   Ext: '.gz'
+[2015/07/16 21:46:40][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:46:40][error] --- Wrapped Exception ---
+[2015/07/16 21:46:40][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/16 21:46:40][error]   Pipeline STDERR Messages:
+[2015/07/16 21:46:40][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/16 21:46:40][error]   
+[2015/07/16 21:46:40][error]   pg_dump: [archiver (db)] connection to database "streetcred_production" failed: FATAL:  role "deploy" does not exist
+[2015/07/16 21:46:40][error]   The following system errors were returned:
+[2015/07/16 21:46:40][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/16 21:46:40][error] 
+[2015/07/16 21:46:40][error] Backtrace:
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:46:40][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:46:40][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:46:40][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:46:40][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:46:40][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:46:40][warn]   
+[2015/07/16 21:46:40][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:46:40][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:46:40][warn]   These files will be removed at that time!
+[2015/07/16 21:46:40][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:47:20][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:47:20][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:47:20][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:47:20][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:47:20][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:47:20][warn]   It will now be removed.
+[2015/07/16 21:47:20][warn]   
+[2015/07/16 21:47:20][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 21:47:20][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:47:20][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 21:47:20][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:47:20][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:47:20][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:47:20][info]   Ext: '.gz'
+[2015/07/16 21:47:24][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:47:24][info] Packaging the backup files...
+[2015/07/16 21:47:24][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:47:24][info] Packaging Complete!
+[2015/07/16 21:47:24][info] Cleaning up the temporary files...
+[2015/07/16 21:47:24][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:47:24][info] Storing '25.134.149.106:backups/westworth/westworth_prod_backup/2015.07.16.21.47.20/westworth_prod_backup.tar'...
+[2015/07/16 21:47:24][info] Cycling Started...
+[2015/07/16 21:47:24][info] Removing backup package dated 2015.07.16.21.14.35...
+[2015/07/16 21:47:25][warn] Storage::Cycler::Error: There was a problem removing the following package:
+[2015/07/16 21:47:25][warn]   Trigger: westworth_prod_backup :: Dated: 2015.07.16.21.14.35
+[2015/07/16 21:47:25][warn]   Package included the following 1 file(s):
+[2015/07/16 21:47:25][warn]   westworth_prod_backup.tar
+[2015/07/16 21:47:25][warn] --- Wrapped Exception ---
+[2015/07/16 21:47:25][warn] Storage::SCP::Error: Net::SSH reported the following errors:
+[2015/07/16 21:47:25][warn]   rm: backups/westworth/westworth_prod_backup/2015.07.16.21.14.35: No such file or directory
+[2015/07/16 21:47:25][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:47:25][info] Cleaning up the package files...
+[2015/07/16 21:47:25][info] Syncer::RSync::Pull Started...
+[2015/07/16 21:47:25][info] Running system utility 'rsync'...
+[2015/07/16 21:47:26][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:47:26][error] --- Wrapped Exception ---
+[2015/07/16 21:47:26][error] Utilities::Error: Failed to execute 'rsync'
+[2015/07/16 21:47:26][error] --- Wrapped Exception ---
+[2015/07/16 21:47:26][error] Interrupt: 
+[2015/07/16 21:47:26][error] 
+[2015/07/16 21:47:26][error] Backtrace:
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:178:in `read'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:178:in `block in run'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `call'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:107:in `do_popen'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/open4-1.3.0/lib/open4.rb:30:in `popen4'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:176:in `run'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/utilities.rb:217:in `block (2 levels) in <module:Helpers>'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/syncer/rsync/pull.rb:13:in `perform!'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:272:in `each'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:272:in `perform!'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:47:26][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:47:26][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:47:27][error] Notifier::Error: Notifier::Mail Failed!
+[2015/07/16 21:47:27][error] --- Wrapped Exception ---
+[2015/07/16 21:47:27][error] Interrupt: 
+[2015/07/16 21:50:02][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:50:02][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:50:02][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:50:02][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:50:02][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:50:02][info]   Ext: '.gz'
+[2015/07/16 21:50:05][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:50:05][info] Packaging the backup files...
+[2015/07/16 21:50:05][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:50:05][info] Packaging Complete!
+[2015/07/16 21:50:05][info] Cleaning up the temporary files...
+[2015/07/16 21:50:05][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:50:06][info] Storing '25.134.149.106:backups/westworth/westworth_prod_backup/2015.07.16.21.50.02/westworth_prod_backup.tar'...
+[2015/07/16 21:50:06][info] Cycling Started...
+[2015/07/16 21:50:06][info] Removing backup package dated 2015.07.16.21.16.19...
+[2015/07/16 21:50:06][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:50:06][info] Cleaning up the package files...
+[2015/07/16 21:50:06][info] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully in 00:00:04
+[2015/07/16 21:50:06][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:50:52][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:50:52][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:50:52][info] Database::PostgreSQL (westworth) Started...
+[2015/07/16 21:50:52][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:50:52][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:50:52][info]   Ext: '.gz'
+[2015/07/16 21:50:55][info] Database::PostgreSQL (westworth) Finished!
+[2015/07/16 21:50:55][info] Packaging the backup files...
+[2015/07/16 21:50:55][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 21:50:55][info] Packaging Complete!
+[2015/07/16 21:50:55][info] Cleaning up the temporary files...
+[2015/07/16 21:50:55][info] Storage::SCP (westworth) Started...
+[2015/07/16 21:50:55][info] Storing '25.134.149.106:backups/westworth/westworth_prod_backup/2015.07.16.21.50.52/westworth_prod_backup.tar'...
+[2015/07/16 21:50:55][info] Cycling Started...
+[2015/07/16 21:50:55][info] Removing backup package dated 2015.07.16.21.25.44...
+[2015/07/16 21:50:56][info] Storage::SCP (westworth) Finished!
+[2015/07/16 21:50:56][info] Cleaning up the package files...
+[2015/07/16 21:50:56][info] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully in 00:00:04
+[2015/07/16 21:50:56][info] Sending notification using Notifier::Mail...
+[2015/07/16 21:53:20][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 21:53:20][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 21:53:20][info] Database::PostgreSQL (id) Started...
+[2015/07/16 21:53:20][info] Using Compressor::Gzip for compression.
+[2015/07/16 21:53:20][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 21:53:20][info]   Ext: '.gz'
+[2015/07/16 21:53:20][error] Model::Error: Backup for Westworth production daily database backups (westworth_prod_backup) Failed!
+[2015/07/16 21:53:20][error] --- Wrapped Exception ---
+[2015/07/16 21:53:20][error] Database::PostgreSQL::Error: Dump Failed!
+[2015/07/16 21:53:20][error]   Pipeline STDERR Messages:
+[2015/07/16 21:53:20][error]   (Note: may be interleaved if multiple commands returned error messages)
+[2015/07/16 21:53:20][error]   
+[2015/07/16 21:53:20][error]   pg_dump: [archiver (db)] connection to database "deploy" failed: FATAL:  role "deploy" does not exist
+[2015/07/16 21:53:20][error]   The following system errors were returned:
+[2015/07/16 21:53:20][error]   Errno::EPERM: Operation not permitted - 'pg_dump' returned exit code: 1
+[2015/07/16 21:53:20][error] 
+[2015/07/16 21:53:20][error] Backtrace:
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/database/postgresql.rb:72:in `perform!'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `each'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:269:in `block in perform!'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `each'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/model.rb:268:in `perform!'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/lib/backup/cli.rb:156:in `perform'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/gems/backup-4.1.10/bin/backup:5:in `<top (required)>'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `load'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/backup:23:in `<main>'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
+[2015/07/16 21:53:20][error]   /Users/colton/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
+[2015/07/16 21:53:20][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 21:53:20][warn]   The temporary packaging folder still exists!
+[2015/07/16 21:53:20][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 21:53:20][warn]   This folder may contain completed Archives and/or Database backups.
+[2015/07/16 21:53:20][warn]   
+[2015/07/16 21:53:20][warn]   Make sure you check these files before the next scheduled backup for
+[2015/07/16 21:53:20][warn]   'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 21:53:20][warn]   These files will be removed at that time!
+[2015/07/16 21:53:20][info] Sending notification using Notifier::Mail...
+[2015/07/16 22:08:42][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 22:08:42][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 22:08:42][warn] Cleaner::Error: Cleanup Warning
+[2015/07/16 22:08:42][warn]   The temporary packaging folder still exists!
+[2015/07/16 22:08:42][warn]   '/Users/colton/Backup/.tmp/westworth_prod_backup'
+[2015/07/16 22:08:42][warn]   It will now be removed.
+[2015/07/16 22:08:42][warn]   
+[2015/07/16 22:08:42][warn]   Please check the log for messages and/or your notifications
+[2015/07/16 22:08:42][warn]   concerning this backup: 'Westworth production daily database backups (westworth_prod_backup)'
+[2015/07/16 22:08:42][warn]   The temporary files which had to be removed should not have existed.
+[2015/07/16 22:08:42][info] Database::PostgreSQL Started...
+[2015/07/16 22:08:42][info] Using Compressor::Gzip for compression.
+[2015/07/16 22:08:42][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 22:08:42][info]   Ext: '.gz'
+[2015/07/16 22:08:46][info] Database::PostgreSQL Finished!
+[2015/07/16 22:08:46][info] Packaging the backup files...
+[2015/07/16 22:08:46][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 22:08:46][info] Packaging Complete!
+[2015/07/16 22:08:46][info] Cleaning up the temporary files...
+[2015/07/16 22:08:46][info] Storage::SCP (westworth) Started...
+[2015/07/16 22:08:46][info] Storing '25.134.149.106:backups/westworth/westworth_prod_backup/2015.07.16.22.08.42/westworth_prod_backup.tar'...
+[2015/07/16 22:08:46][info] Cycling Started...
+[2015/07/16 22:08:46][info] Removing backup package dated 2015.07.16.21.38.37...
+[2015/07/16 22:08:46][info] Storage::SCP (westworth) Finished!
+[2015/07/16 22:08:46][info] Cleaning up the package files...
+[2015/07/16 22:08:46][warn] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully (with Warnings) in 00:00:04
+[2015/07/16 22:08:46][info] Sending notification using Notifier::Mail...
+[2015/07/16 22:10:33][info] Performing Backup for 'Westworth production daily database backups (westworth_prod_backup)'!
+[2015/07/16 22:10:33][info] [ backup 4.1.10 : ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-darwin14] ]
+[2015/07/16 22:10:33][info] Database::PostgreSQL Started...
+[2015/07/16 22:10:33][info] Using Compressor::Gzip for compression.
+[2015/07/16 22:10:33][info]   Command: '/usr/bin/gzip -9'
+[2015/07/16 22:10:33][info]   Ext: '.gz'
+[2015/07/16 22:10:37][info] Database::PostgreSQL Finished!
+[2015/07/16 22:10:37][info] Packaging the backup files...
+[2015/07/16 22:10:37][info] Splitter configured with a chunk size of 250MB and suffix length of 3.
+[2015/07/16 22:10:37][info] Packaging Complete!
+[2015/07/16 22:10:37][info] Cleaning up the temporary files...
+[2015/07/16 22:10:37][info] Storage::SCP (westworth) Started...
+[2015/07/16 22:10:37][info] Storing '25.134.149.106:backups/westworth/westworth_prod_backup/2015.07.16.22.10.33/westworth_prod_backup.tar'...
+[2015/07/16 22:10:37][info] Cycling Started...
+[2015/07/16 22:10:37][info] Removing backup package dated 2015.07.16.21.39.49...
+[2015/07/16 22:10:37][info] Storage::SCP (westworth) Finished!
+[2015/07/16 22:10:37][info] Cleaning up the package files...
+[2015/07/16 22:10:37][info] Backup for 'Westworth production daily database backups (westworth_prod_backup)' Completed Successfully in 00:00:04
+[2015/07/16 22:10:37][info] Sending notification using Notifier::Mail...

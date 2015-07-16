@@ -1,0 +1,36 @@
+---
+- !ruby/object:Backup::Package
+  trigger: prod_backup
+  extension: tar
+  chunk_suffixes: []
+  no_cycle: false
+  version: 4.1.10
+  time: 2015.07.15.14.36.09
+- !ruby/object:Backup::Package
+  trigger: prod_backup
+  extension: tar
+  chunk_suffixes: []
+  no_cycle: false
+  version: 4.1.10
+  time: 2015.07.15.14.35.07
+- !ruby/object:Backup::Package
+  trigger: prod_backup
+  extension: tar
+  chunk_suffixes: []
+  no_cycle: false
+  version: 4.1.10
+  time: 2015.07.15.14.18.34
+- !ruby/object:Backup::Package
+  trigger: prod_backup
+  extension: tar
+  chunk_suffixes: []
+  no_cycle: false
+  version: 4.1.10
+  time: 2015.07.15.14.10.59
+- !ruby/object:Backup::Package
+  trigger: prod_backup
+  extension: tar
+  chunk_suffixes: []
+  no_cycle: false
+  version: 4.1.10
+  time: 2015.07.15.14.03.20
