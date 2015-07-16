@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 1.day, :at => '9:00 pm' do
-  command "cd /home/deploy/backup_app && backup perform --triggers gatesville_prod_backup, mansfield_prod_backup, richland_hills_prod_backup, southlake_prod_backup, westworth_prod_backup, white_settlement_prod_backup"
+  command "cd /home/deploy/backup_app && backup perform --trigger prod_backup"
 end

@@ -1,5 +1,5 @@
 server = "westworth"
-MyModel.new(:"#{server}_prod_backup", "#{server.capitalize} production daily database backups") do
+MyModel.new(:prod_backup, "#{server.capitalize} production daily database backups") do
 
   database PostgreSQL do |db|
     db.host               = SERVERS["#{server}"]
