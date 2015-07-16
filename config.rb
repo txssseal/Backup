@@ -50,6 +50,9 @@ Backup::Storage::SCP.defaults do |s|
   s.keep     = 5
 end
 
+Utilities.configure do
+  pg_dump     '/usr/pgsql-9.3/bin/pg_dump'
+end
 
 
 # encoding: utf-8
