@@ -1,1 +1,4 @@
-
+.date/*
+.tmp/*
+lib/*
+log/*
