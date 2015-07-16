@@ -50,11 +50,6 @@ Backup::Storage::SCP.defaults do |s|
   s.keep     = 5
 end
 
-Backup::Syncer::RSync.defaults do |rsync|
-  rsync.mode = :ssh
-  rsync.ssh_user = "deploy"
-  rsync.compress = true
-end
 
 
 # encoding: utf-8
