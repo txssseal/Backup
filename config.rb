@@ -36,7 +36,7 @@ end
 
 Backup::Database::PostgreSQL.defaults do |db|
   db.name               = "streetcred_production"
-  db.username           = "postgres"
+  db.username           = "deploy"
   db.password           = "34qn23mn1"
   db.port               = 5432
   db.skip_tables        = ['change_log']
@@ -44,7 +44,7 @@ end
 
 Backup::Storage::SCP.defaults do |s|
   s.username = 'deploy'
-  s.password = '34qn23mn1'
+  s.password = SECRETS['bud_server_pw']
   s.ip       = '25.162.227.70'
   s.port     = 22
   s.keep     = 5
