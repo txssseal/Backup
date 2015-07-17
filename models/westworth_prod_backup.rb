@@ -15,7 +15,7 @@ MyModel.new(:prod_backup, "#{server.capitalize} production daily database backup
     rsync.ssh_user = "deploy"
     rsync.compress = true
     rsync.directories do |directory|
-      directory.add "/var/www/vhosts/streetcred/shared/public/images/fugitive-images"
+      directory.add "/var/www/vhosts/streetcred/shared/public/images/fugitive-images/*"
     end
     rsync.path = "~/backups/#{server}/fugitive-images-backup"
   end
